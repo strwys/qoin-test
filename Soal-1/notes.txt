@@ -1,0 +1,35 @@
+Keranjang: 
+ * data example: - 1x Potato 5000
+                 - 1x Burger 10000
+ 
+ * query : select quantity, name, price  
+           from cart_item ci 
+           inner join user u on u.user_id = ci.user_id   
+           where u.user_id = 1
+
+Struk: 
+ * data example - nama: Cecep Supriadi
+                - item: 1x Potato 5000
+                        1x Burger 10000
+                - Total: 15000
+                - Tanggal: 12-12-2021
+
+ * query : select full_name, item, total_price, created_at 
+           from receipt
+           where order_id = 1 and user_id = 1
+
+laporan: 
+ * data example: - tanggal: 12-12-2020
+                 - total_price 20000
+
+ * query: select created_at as date, sum(total_price), DATE_FORMAT(date, '%Y-%M-%D') AS group_date 
+          from transaction
+          where created_at beetween 12-12-2021 and 12-12-2023 
+          group by group_date
+
+stok: 
+ * data example: - nama: Potato 
+                 - stock: 1
+                 
+ * query: select name, stock from item 
+          where created_at beetween 12-12-2021 and 12-12-2023
