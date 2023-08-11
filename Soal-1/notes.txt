@@ -18,7 +18,7 @@ Struk:
            from receipt
            where order_id = 1 and user_id = 1
 
-laporan: 
+Laporan income: 
  * data example: - tanggal: 12-12-2020
                  - total_price 20000
 
@@ -27,9 +27,9 @@ laporan:
           where created_at beetween 12-12-2021 and 12-12-2023 
           group by group_date
 
-stok: 
+Laporan stock: 
  * data example: - nama: Potato 
                  - stock: 1
-                 
+
  * query: select name, stock from item 
           where created_at beetween 12-12-2021 and 12-12-2023
